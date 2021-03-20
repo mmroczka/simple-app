@@ -3,7 +3,7 @@ import Header from './components/Header'
 import { connect } from 'react-redux'
 import {setInfo } from '../redux/actions/main'
 
-export default function Home() {
+function Weather() {
   return (
     <div className="container">
       <Head>
@@ -11,10 +11,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="main">
+      <main>
         <div className="main">
           <h1 className="title">
-            weather today
+            Weather report today is good!
           </h1>
           <Header />
         </div>
@@ -23,12 +23,12 @@ export default function Home() {
   )
 }
 
-// const mapStateToProps = state => ({
-//   userInfo: state
-// })
+const mapStateToProps = state => ({
+  userInfo: state
+})
 
-// const mapDispatchToProps = {
-//   setInfo: setInfo
-// }
+const mapDispatchToProps = {
+  setInfo: setInfo
+}
 
-// export default connect(mapStateToProps, mapDispatchToProps)(Weather)
+export default connect(mapStateToProps, mapDispatchToProps)(Weather)
