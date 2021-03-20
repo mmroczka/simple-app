@@ -24,7 +24,7 @@ function Weather() {
 }
 
 const mapStateToProps = state => ({
-  userInfo: state
+  userInfo: state.main
 })
 
 const mapDispatchToProps = {
