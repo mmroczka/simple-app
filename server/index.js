@@ -1,8 +1,8 @@
 const express = require("express")
 const next = require("next")
-
+require("dotenv").config()
  const PORT = 3243
- const app = next({dev: true})
+ const app = next({dev: process.env.NODE_ENV !== 'production'})
  const handle = app.getRequestHandler();
 
  app
